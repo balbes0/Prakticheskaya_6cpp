@@ -8,7 +8,7 @@ class Drink {
 public:
     string name;
     int volume;
-    int price; // new price variable
+    int price;
 
     Drink(string n, int v, int p) : name(n), volume(v), price(p) {}
     virtual ~Drink() {}
@@ -118,7 +118,7 @@ public:
                 break;
             }
             if (choice > 0 && choice <= drinks.size()) {
-                orderTotal += drinks[choice - 1]->price; // use price instead of volume
+                orderTotal += drinks[choice - 1]->price;
                 cout << "Напиток добавлен в заказ. Общая стоимость заказа: " << orderTotal << " руб." << endl;
             }
             else {
